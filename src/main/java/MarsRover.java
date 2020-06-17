@@ -22,9 +22,23 @@ public class MarsRover {
             handleSouthFacingRoverMovement(directions[0]);
         }
         if ("E".equals(facingDirection)) {
-            if (directions[0] == 'F') {
-                xAxis++;
-            }
+            handleEastFacingRoverMovement(directions);
+        }
+    }
+
+
+    private void handleEastFacingRoverMovement(char[] directions) {
+        if (directions[0] == 'F') {
+            xAxis++;
+        }
+        if(directions[0] == 'B') {
+            xAxis--;
+        }
+        if(directions[0] == 'L') {
+            yAxis++;
+        }
+        if(directions[0] == 'R') {
+            yAxis--;
         }
     }
 
